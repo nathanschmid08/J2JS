@@ -3,7 +3,7 @@
 # Die Benutzeroberfläche für den Java zu JavaScript Konverter
 
 import tkinter as tk
-from tkinter import ttk, scrolledtext, messagebox, filedialog
+from tkinter import ttk, scrolledtext, messagebox, filedialog, PhotoImage
 import sys
 import os
 
@@ -19,9 +19,18 @@ class JavaToJSApp:
         
     def setup_ui(self):
         """Erstellt die GUI-Elemente"""
-        self.root.title("Java zu JavaScript Konverter")
+        self.root.title("J2JS")
         self.root.geometry("1000x700")
         self.root.minsize(800, 600)
+
+        def resource_path(relative_path):
+            """Get the absolute path to a resource, works for dev and for PyInstaller."""
+            base_path = getattr(sys, '_MEIPASS', os.path.dirname(os.path.abspath(__file__)))
+            return os.path.join(base_path, relative_path)
+
+        # Use resource_path to correctly locate the icon file
+        icon = PhotoImage(file=resource_path("ICONS/favicon.png"))
+        self.root.iconphoto(True, icon)
         
         # Hauptframe für alle Inhalte
         main_frame = ttk.Frame(self.root, padding="10")

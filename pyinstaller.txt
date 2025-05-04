@@ -1,0 +1,1 @@
+pyinstaller --onefile --windowed --icon=ICONS/favicon.ico --add-data "ICONS\\favicon.png;ICONS" --add-data "ICONS\\favicon.ico;ICONS" java_to_js_gui.py
