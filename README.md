@@ -49,12 +49,14 @@ J2JS is an experimental code converter that translates Java source code into equ
 <hr>
 
 ## 🚀 Getting Started
-Download
+
+### Download
 Download the Repo, in the dist folder you will find the .exe
 <hr>
 
 ## 🧪 Example
 
+### Java Input
 ```java
 javapublic class HelloWorld {
   public static void main(String[] args) {
@@ -62,6 +64,8 @@ javapublic class HelloWorld {
   }
 }
 ```
+
+### JavaScript Output
 ```javascript
 javascriptclass HelloWorld {
   static main(args) {
